@@ -47,10 +47,10 @@ function _addItem(item) {
 }
 
 function _cartTotals(initialQty = 0, initialTotal = 0) {
-	const qty = _cartItems.reduce(
+	const qty = cartItems.reduce(
 		(prev, current) => prev + current.qty, 
 		initialQty);
-	const total = _cartItems.reduce(
+	const total = cartItems.reduce(
 		(prev, current) => prev + current.qty * current.cost, 
 		initialTotal);
 	return {qty, total}
